@@ -6,10 +6,10 @@
 </head>
 <body>
     <header class="page-header">
+        <h2 class="visually-hidden">Навигация</h2>
         <a class="logo" href="#">
             <img src="" alt="Логотип сайта Device">
         </a>
-        <!--Поиск через форму или просто инпут? Пример видел на одной странице в htmlacademy-->
         <form action="https://echo.htmlacademy.ru/courses" method="GET" class="search">
             <label for="search-site">Кнопка</label>
             <input type="search" name="sitesearch" id="search-site" placeholder="Поиск по сайту">
@@ -25,15 +25,32 @@
                     <a href="#" class="navigation-link">Корзина</a>
                 </li>
             </ul>
-            <!--Выделить каталог отдельно? У каталога есть кнопка со своим списком-->
-          <nav class="catalog-navigation">
-                <ul class="catalog-nav-list">
+            <!--Выделил каталог, но не уверен, что правильно. Нужна оценка.-->
+        <nav class="navigation">
+            <ul class="navigation-main">
+                <ul class="navigation-catalog">
                     <li class="catalog-nav-item">
-                        <a href="catalog.html" class="navigation-link">Каталог</a>
+                        <a href="catalog.html" class="navigation-catalog-link">Каталог</a>
+                    </li>
+                    <li class="catalog-nav-item">
+                        <a href="catalog.html" class="navigation-catalog-link">Виртуальная реальность</a>
+                    </li>
+                    <li class="catalog-nav-item">
+                        <a href="catalog.html" class="navigation-catalog-link">Моноподы для селфи</a>
+                    </li>
+                    <li class="catalog-nav-item">
+                        <a href="catalog.html" class="navigation-catalog-link">Экшн-камеры</a>
+                    </li>
+                    <li class="catalog-nav-item">
+                        <a href="catalog.html" class="navigation-catalog-link">Фитнес-браслеты</a>
+                    </li>
+                    <li class="catalog-nav-item">
+                        <a href="catalog.html" class="navigation-catalog-link">Умные часы</a>
+                    </li>
+                    <li class="catalog-nav-item">
+                        <a href="catalog.html" class="navigation-catalog-link">Квадрокоптеры</a>
                     </li>
                 </ul>
-          </nav>
-        <nav class="navigation">
                 <li class="navigation-item">
                     <a href="delivery.html" class="navigation-link">Доставка</a>
                 </li>
@@ -49,7 +66,7 @@
     <main>
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
         <section class="slider">
-            <!--Сделал только первый слайд. Нужна консультация правильно ли. Если да, то сверстаю остальные слайды подобным образом-->
+            <!--Так понимаю, слайд свёрстан корректно? Можно другие слайды также разметить? Комментарий по нему от тебя не было, но всё же решил уточнить-->
             <div class="slide-1">
                 <button class="slider-button slider-prev" type="button">
                     <span class="visually-hidden">Предыдущее фото</span>
@@ -58,26 +75,9 @@
                   <button class="slider-button slider-next" type="button">
                     <span class="visually-hidden">Следующее фото</span>
                   </button>
-                  <p class="slider-desctiption-1"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
-                  <p class="slider-description-2">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                  <a class="slider-button" href="#">ПОДРОБНЕЕ</a>
-                  <ol class="slider-pagination">
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                        <span class="visually-hidden">1 фото</span>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                        <button class="slider-pagination-button" type="button">
-                          <span class="visually-hidden">2 фото</span>
-                        </button>
-                      </li>
-                      <li class="slider-pagination-item">
-                        <button class="slider-pagination-button" type="button">
-                          <span class="visually-hidden">3 фото</span>
-                        </button>
-                      </li>
-                  </ol>
+                  <p class="slider-name"><strong>Порхает как бабочка, жалит как пчела!</strong></p>
+                  <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                  <a class="slider-button" href="#">Подробнее</a>
                   <table class="slider-advantages">
                     <tr>
                         <td class="slider-advantages-top">800 м</td>
@@ -89,6 +89,23 @@
                     </tr>
                   </table>
             </div>
+            <ol class="slider-pagination">
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">1 фото</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                    <button class="slider-pagination-button" type="button">
+                      <span class="visually-hidden">2 фото</span>
+                    </button>
+                  </li>
+                  <li class="slider-pagination-item">
+                    <button class="slider-pagination-button" type="button">
+                      <span class="visually-hidden">3 фото</span>
+                    </button>
+                  </li>
+              </ol>
         </section>
         <section class="products">
             <h2 class="visually-hidden">Категории</h2>
@@ -103,7 +120,7 @@
         </section>
         <section class="services">
             <h2 class="visually-hidden">Сервисы</h2>
-            <!--Не знаю, как здесь правильно оформить табы — ситуация похожа на слайдер-->
+            <!--Вопрос задал в комментарии в диффе-->
             <ul class="services-tabs">
                 <li class="tab-1">Доставка</li>
                 <li class="tab-2">Гарантия</li>
@@ -119,8 +136,8 @@
         <section class="company">
             <h2 class="visually-hidden">О компании</h2>
             <header class="company-header">
-                <img class="company-header-icon" src="" alt="Иконка нарисованного автомобиля">
-                <strong class="company-header-title">ДОСТАВИМ РЕДКИЙ ТОВАР ПОД ЗАКАЗ</strong>
+                <div class="company-header-icon"><span class="visually-hidden">Иконка нарисованного автомобиля</span></div>
+                <strong class="company-header-title">Доставим редкий товар под заказ</strong>
                 <button type="button" class="company-info">
                     <span class="visually-hidden">Инфо</span>
                 </button>
@@ -134,7 +151,7 @@
                     <li class="company-about-delivery-item">СДИК</li>
                     <li class="company-about-delivery-item">ТоксБерри</li>
                 </ul>
-                <a class="company-about-button" href="#">ПОДРОБНЕЕ О НАС</a>
+                <a class="company-about-button" href="#">Подробнее о нас</a>
             </div>
             <div class="company-contacts">
                 <h2 class="company-contacts-title">Контакты</h2>
@@ -149,28 +166,33 @@
                     <li>пн—пт: с 10:00 до 22:00</li>
                     <li>сб—вс: с 10:00 до 19:00</li>
                 </ul>
-                <a class="company-contacts-button" href="#">НАПИШИТЕ НАМ</a>
+                <a class="company-contacts-button" href="#">Напишите нам</a>
             </div>
         </section>
         <section class="mailing">
             <h2 class="visually-hidden">Рассылка</h2>
-            <h2 class="mailing-title">Подпишитесь
+            <h3 class="mailing-title">Подпишитесь
                 <br>
-                на рассылку</h2>
-            <input class="mailing-email-feild" type="email" placeholder="Ваш e-mail">
-            <p>Еженедельный дайджест с обзорами новинок,
-                <br>
-                длительными тест-драйвами, распаковками, а также акции, 
-                <br>
-                спецпредложения и вот это вот всё.</p>
-                <button class="mailing-subscription-button" type="button">Подписаться</button>
-                <input class="mailing-checkbox" type="checkbox" checked>
-                <span class="mailing-free">Это бесплатно</span>
+                на рассылку</h3>
+            <form action="https://echo.htmlacademy.ru/courses" method="GET" class="mailing-subscription">
+                <input class="mailing-email-feild" type="email" placeholder="Ваш e-mail">
+                <p class="mailing-text">Еженедельный дайджест с обзорами новинок,
+                    <br>
+                    длительными тест-драйвами, распаковками, а также акции, 
+                    <br>
+                    спецпредложения и вот это вот всё.</p>
+                    <input class="mailing-subscription-button" type="submit" value="Подписаться"></input>
+                    <input class="mailing-checkbox" type="checkbox" checked>
+                    <span class="mailing-free">Это бесплатно</span>
+           </form>
         </section>
     </main>
     <footer class="page-footer">
+        <h2 class="visually-hidden">Подвал сайта</h2>
         <section class="footer-left-section">
-            <img class="footer-logo" src="" alt="Логотип компании Девайс">
+            <a href="#">
+                <img class="footer-logo" src="" alt="Логотип компании Девайс">
+            </a>
             <address class="footer-adress">
                 <p class="footer-address-text">Санкт-Петербург, набережная
                     <br>
@@ -191,19 +213,20 @@
         </ul>
         </section>
         <section class="footer-social">
+            <h2 class="visually-hidden">Ссылки на социальные сети</h2>
             <ul>
                 <li class="footer-contacts-item">
-                    <a class="footer-button" href="#">
+                    <a class="footer-button" href="https://www.facebook.com/htmlacademy">
                         <span class="visually-hidden">Facebook</span>
                     </a>
                 </li>
                 <li class="footer-contacts-item">
-                    <a class="footer-button" href="#">
+                    <a class="footer-button" href="https://www.instagram.com/htmlacademy">
                         <span class="visually-hidden">Instagram</span>
                     </a>
                 </li>
                 <li class="footer-contacts-item">
-                    <a class="footer-button" href="#">
+                    <a class="footer-button" href="https://twitter.com/htmlacademy_ru">
                         <span class="visually-hidden">Twitter</span>
                     </a>
                 </li>
